@@ -1,0 +1,8 @@
+title: Post 1
+date: 2018-07-20
+
+header:
+  - header.md
+
+main:
+  - body.md
