@@ -27,21 +27,21 @@ const Html = styled.html`
     font-family: DroidSans;
 		font-style: normal;
 		font-weight: normal;
-    src: url(/assets/fonts/DroidSans.ttf);
+    src: url(${({ root }) => root}assets/fonts/DroidSans.ttf);
 	}
 
 	@font-face {
     font-family: DroidSans;
 		font-style: normal;
 		font-weight: bold;
-    src: url(/assets/fonts/DroidSans-Bold.ttf);
+    src: url(${({ root }) => root}assets/fonts/DroidSans-Bold.ttf);
 	}
 
 	@font-face {
     font-family: DroidSansMono;
 		font-style: normal;
 		font-weight: normal;
-    src: url(/assets/fonts/DroidSansMono.ttf);
+    src: url(${({ root }) => root}assets/fonts/DroidSansMono.ttf);
 	}
 
 	font-family: DroidSans;
@@ -182,7 +182,7 @@ const Page = (props) => {
 	// console.log("page", title, _ID, Object.keys(props));
 
 	return (
-		<Html>
+		<Html root={_pages.index._url}>
 			<head>
 				<title>{title}</title>
 
