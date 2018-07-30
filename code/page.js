@@ -177,7 +177,7 @@ const Main = styled.main`
 `;
 
 const Page = (props) => {
-	const { title, header, main, footer, _ID } = props;
+	const { title, header, main, footer, _pages, _ID } = props;
 
 	// console.log("page", title, _ID, Object.keys(props));
 
@@ -195,7 +195,7 @@ const Page = (props) => {
 
 				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-				<link rel="stylesheet" href="/assets/css/hljs.atom_one_dark.css" />
+				<link rel="stylesheet" href={`${_pages.index._url}assets/css/hljs.atom_one_dark.css`} />
 			</head>
 
 			<Body>

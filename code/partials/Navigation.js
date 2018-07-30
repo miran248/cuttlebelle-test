@@ -47,17 +47,17 @@ const Nav = styled.nav`
 `;
 
 const Navigation = (props) => {
-	const { _ID } = props;
+	const { _pages, _ID } = props;
 
 	return (
 		<Nav>
-			<a href="/" className={activeClass(_ID, "index")}>
+			<a href={_pages.index._url} className={activeClass(_ID, "index")}>
 				<i className="material-icons">home</i>
 			</a>
-			<a href="/posts" className={activeClass(_ID, "posts")}>
+			<a href={_pages.posts._url} className={activeClass(_ID, "posts")}>
 				<i className="material-icons">list</i>
 			</a>
-			<a href="/contact" className={activeClass(_ID, "contact")}>
+			<a href={`${_pages.index._url}contacts`} className={activeClass(_ID, "contact")}>
 				<i className="material-icons">mail</i>
 			</a>
 		</Nav>
